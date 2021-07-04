@@ -24,3 +24,4 @@ def detect(filename, outputname, cascade_file=CASCADE_FILE):
         cropped = image[y: y + h, x: x + w]
         cv2.imwrite(outputname, cropped)
         i = i + 1
+    return len(faces)

@@ -26,7 +26,7 @@ def detect(cascade_file, filename, outputname):
         i = i + 1
 
 
-if len(sys.argv) != 4:
+if len(sys.argv) != 3:
     sys.stderr.write("usage: detect.py  <input> <output prefix>\n")
     sys.exit(-1)
 

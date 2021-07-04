@@ -5,4 +5,3 @@ load_dotenv()
 DL_DIRECTORY = os.environ.get("DL-DIRECTORY")
 
 client = Danbooru('danbooru')
-

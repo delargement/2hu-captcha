@@ -5,7 +5,7 @@ import os.path
 CASCADE_FILE = "../model/lbpcascade_animeface.xml"
 
 
-def detect(cascade_file, filename, outputname):
+def detect(filename, outputname, cascade_file=CASCADE_FILE):
     if not os.path.isfile(cascade_file):
         raise RuntimeError("%s: not found" % cascade_file)
 
@@ -22,12 +22,5 @@ def detect(cascade_file, filename, outputname):
     i = 0
     for (x, y, w, h) in faces:
         cropped = image[y: y + h, x: x + w]
-        cv2.imwrite(outputname + str(i) + ".png", cropped)
+        cv2.imwrite(outputname, cropped)
         i = i + 1
-
-
-if len(sys.argv) != 4:
-    sys.stderr.write("usage: detect.py  <input> <output prefix>\n")
-    sys.exit(-1)
-
-detect(CASCADE_FILE, sys.argv[1], sys.argv[2])

@@ -6,3 +6,4 @@ Pybooru==4.2.2
 python-dotenv==0.18.0
 requests==2.25.1
 urllib3==1.26.6
+opencv-python~=4.5.2.54
